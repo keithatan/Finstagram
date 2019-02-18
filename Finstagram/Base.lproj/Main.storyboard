@@ -35,6 +35,7 @@
                                     <constraint firstAttribute="width" constant="247" id="eyw-df-Cn5"/>
                                 </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5j-CX-ijb">
@@ -126,11 +127,66 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9cJ-nv-uLp"/>
                     </view>
-                    <navigationItem key="navigationItem" id="m9W-Ts-Y5y"/>
+                    <navigationItem key="navigationItem" id="m9W-Ts-Y5y">
+                        <barButtonItem key="rightBarButtonItem" image="insta_camera_btn" id="xSz-y4-gRZ">
+                            <connections>
+                                <segue destination="AyH-DM-tCb" kind="presentation" id="Koz-UE-I6a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nie-FQ-SSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1604" y="-21.139430284857571"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="3K5-qd-FZf">
+            <objects>
+                <viewController id="AyH-DM-tCb" customClass="CameraViewController" customModule="Finstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RQ1-xB-au1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="v3K-bi-EeD">
+                                <rect key="frame" x="16" y="36" width="343" height="317"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RxZ-b4-cFv" appends="YES" id="fer-Fd-d8g"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mf5-Rr-0cH">
+                                <rect key="frame" x="16" y="361" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vj-oO-bV5">
+                                <rect key="frame" x="142" y="421" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit:" destination="AyH-DM-tCb" eventType="touchUpInside" id="dpa-4d-lV5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lg9-hb-X0f"/>
+                    </view>
+                    <connections>
+                        <outlet property="captionField" destination="Mf5-Rr-0cH" id="fJQ-xT-RmH"/>
+                        <outlet property="imageView" destination="v3K-bi-EeD" id="GXq-0F-ZD3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I7U-7D-JpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="RxZ-b4-cFv">
+                    <connections>
+                        <action selector="initiateCamera:" destination="AyH-DM-tCb" id="c4T-cl-gR5"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2453.5999999999999" y="-21.139430284857571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TL3-NN-YaM">
@@ -151,4 +207,8 @@
             <point key="canvasLocation" x="664.79999999999995" y="-21.139430284857571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image_placeholder" width="375" height="375"/>
+        <image name="insta_camera_btn" width="25" height="25"/>
+    </resources>
 </document>
