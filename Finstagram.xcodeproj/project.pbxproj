@@ -14,6 +14,7 @@
 		532039532212634D00AB3089 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532039522212634D00AB3089 /* LoginViewController.swift */; };
 		532039552212636700AB3089 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532039542212636700AB3089 /* FeedViewController.swift */; };
 		53CF44A3221A4F6700D5C231 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF44A2221A4F6700D5C231 /* CameraViewController.swift */; };
+		53CF44A5221A68E500D5C231 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF44A4221A68E500D5C231 /* PostTableViewCell.swift */; };
 		7AE93114F59B636C9BDA66FA /* Pods_Finstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145F172FA902EE7631AA47A2 /* Pods_Finstagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		532039522212634D00AB3089 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = /Users/keith/Documents/GitHub/Finstagram/Finstagram/LoginViewController.swift; sourceTree = "<absolute>"; };
 		532039542212636700AB3089 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		53CF44A2221A4F6700D5C231 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		53CF44A4221A68E500D5C231 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		55C4038547E6DF75D9F74BC0 /* Pods-Finstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finstagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Finstagram/Pods-Finstagram.release.xcconfig"; sourceTree = "<group>"; };
 		C2EE96DBB86F484E49DA937A /* Pods-Finstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finstagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Finstagram/Pods-Finstagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				532039522212634D00AB3089 /* LoginViewController.swift */,
 				532039402212415100AB3089 /* AppDelegate.swift */,
 				532039442212415100AB3089 /* Main.storyboard */,
+				53CF44A4221A68E500D5C231 /* PostTableViewCell.swift */,
 				53CF44A2221A4F6700D5C231 /* CameraViewController.swift */,
 				532039472212415300AB3089 /* Assets.xcassets */,
 				532039492212415300AB3089 /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 			files = (
 				532039532212634D00AB3089 /* LoginViewController.swift in Sources */,
 				53CF44A3221A4F6700D5C231 /* CameraViewController.swift in Sources */,
+				53CF44A5221A68E500D5C231 /* PostTableViewCell.swift in Sources */,
 				532039552212636700AB3089 /* FeedViewController.swift in Sources */,
 				532039412212415100AB3089 /* AppDelegate.swift in Sources */,
 			);
