@@ -73,35 +73,45 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGZ-Io-dKw">
                                 <rect key="frame" x="66" y="172" width="84" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="L00-dI-Fzj"/>
-                                    <constraint firstAttribute="height" constant="21" id="q7T-rw-0LJ"/>
+                                    <constraint firstAttribute="width" constant="84" id="Eiu-QZ-vbn"/>
+                                    <constraint firstAttribute="height" constant="21" id="LDJ-9i-i84"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagramWord" translatesAutoresizingMaskIntoConstraints="NO" id="Wvr-Mn-xfP">
+                                <rect key="frame" x="2" y="36" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="1f6-5U-3gM"/>
+                                    <constraint firstAttribute="height" constant="128" id="99K-Kk-v99"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dGZ-Io-dKw" secondAttribute="trailing" constant="225" id="1Ut-lk-rCw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j7o-FC-9qQ" secondAttribute="bottom" constant="325" id="3rb-Lc-DsT"/>
-                            <constraint firstItem="dGZ-Io-dKw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="3tF-XO-oXh"/>
                             <constraint firstItem="j7o-FC-9qQ" firstAttribute="top" secondItem="xb6-gN-YhL" secondAttribute="bottom" constant="8" id="5I4-IG-T3M"/>
-                            <constraint firstItem="dGZ-Io-dKw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="152" id="6QG-Bd-gvQ"/>
                             <constraint firstItem="L0i-UQ-GbF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="8PK-Ae-wwm"/>
+                            <constraint firstItem="dGZ-Io-dKw" firstAttribute="top" secondItem="Wvr-Mn-xfP" secondAttribute="bottom" constant="8" id="CYO-g8-AFF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L0i-UQ-GbF" secondAttribute="bottom" constant="325" id="DDp-s0-fgT"/>
                             <constraint firstItem="L0i-UQ-GbF" firstAttribute="top" secondItem="xb6-gN-YhL" secondAttribute="bottom" constant="8" id="H9J-4D-yZr"/>
                             <constraint firstItem="xb6-gN-YhL" firstAttribute="top" secondItem="T5j-CX-ijb" secondAttribute="bottom" constant="8" id="HSk-yE-aKP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xb6-gN-YhL" secondAttribute="trailing" constant="62" id="IY8-aj-QrA"/>
+                            <constraint firstItem="Wvr-Mn-xfP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="2" id="Krq-4G-urT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dGZ-Io-dKw" secondAttribute="trailing" constant="225" id="NeD-nJ-vjA"/>
                             <constraint firstItem="j7o-FC-9qQ" firstAttribute="leading" secondItem="L0i-UQ-GbF" secondAttribute="trailing" constant="136" id="Qe0-YS-MBu"/>
                             <constraint firstItem="T5j-CX-ijb" firstAttribute="top" secondItem="p2q-Qg-Eci" secondAttribute="bottom" constant="14" id="SEF-h2-6OG"/>
+                            <constraint firstItem="p2q-Qg-Eci" firstAttribute="top" secondItem="dGZ-Io-dKw" secondAttribute="bottom" constant="8" id="VVq-Ti-OwB"/>
                             <constraint firstItem="p2q-Qg-Eci" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="WKK-14-for"/>
+                            <constraint firstAttribute="trailing" secondItem="Wvr-Mn-xfP" secondAttribute="trailing" constant="-2" id="YJT-Ls-ebP"/>
                             <constraint firstItem="T5j-CX-ijb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="a2f-dn-1Qu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p2q-Qg-Eci" secondAttribute="trailing" constant="62" id="enW-MK-Czv"/>
-                            <constraint firstItem="p2q-Qg-Eci" firstAttribute="top" secondItem="dGZ-Io-dKw" secondAttribute="bottom" constant="8" id="kcp-NV-vwE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j7o-FC-9qQ" secondAttribute="trailing" constant="62" id="l0A-tk-S0m"/>
+                            <constraint firstItem="dGZ-Io-dKw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="maa-Jg-PwI"/>
                             <constraint firstItem="xb6-gN-YhL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="mfw-xQ-48P"/>
-                            <constraint firstItem="p2q-Qg-Eci" firstAttribute="top" secondItem="dGZ-Io-dKw" secondAttribute="bottom" constant="8" id="nT5-le-lSp"/>
+                            <constraint firstItem="dGZ-Io-dKw" firstAttribute="top" secondItem="Wvr-Mn-xfP" secondAttribute="bottom" constant="8" id="vZI-vU-rks"/>
+                            <constraint firstItem="Wvr-Mn-xfP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="wcZ-q1-LlC"/>
                             <constraint firstItem="j7o-FC-9qQ" firstAttribute="leading" secondItem="L0i-UQ-GbF" secondAttribute="trailing" constant="136" id="yBD-za-3ne"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T5j-CX-ijb" secondAttribute="trailing" constant="235" id="z2o-Pd-eYT"/>
                         </constraints>
@@ -269,5 +279,6 @@
     <resources>
         <image name="image_placeholder" width="375" height="375"/>
         <image name="insta_camera_btn" width="25" height="25"/>
+        <image name="instagramWord" width="1200" height="429"/>
     </resources>
 </document>
