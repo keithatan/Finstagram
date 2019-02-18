@@ -6,8 +6,9 @@ target 'Finstagram' do
   use_frameworks!
 
   # Pods for Finstagram
-  pod "Parse"
-  pod "Alamofire"
+  pod 'Parse'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
 
 
 end
