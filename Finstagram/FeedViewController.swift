@@ -61,6 +61,26 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.row]
+        
+        let comment = PFObject(className: "Comments")
+        // Text will go here
+        comment["text"] = ""
+        comment["post"] = post
+        comment["author"] = PFUser.current()!
+        
+        post.add(comment, forKey: "comments")
+        
+        post.saveInBackground{ (success, error) in
+            if success{
+                print("Comment Saved")
+            } else {
+                print("Error occurred saving comment")
+            }
+        }
+        
+    }
     
     @IBAction func onLogout(_ sender: Any) {
         PFUser.logOut()
