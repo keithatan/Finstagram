@@ -15,6 +15,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     let commentBar = MessageInputBar()
     var showCommentBar = false
+    var selectedPost: PFObject!
     
     var posts = [PFObject]()
     
@@ -61,8 +62,22 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text:String){
         // Comment creation
+        let comment = PFObject(className: "Comments")
+        comment["text"] = text
+        comment["post"] = selectedPost
+        comment["author"] = PFUser.current()!
         
+        selectedPost.add(comment, forKey: "comments")
         
+        selectedPost.saveInBackground{ (success, error) in
+            if success{
+                print("Comment Saved")
+                self.tableView.reloadData()
+            } else {
+                print("Error occurred saving comment")
+            }
+        }
+
         // Dismiss input bar
         commentBar.inputTextView.text = nil
         showCommentBar = false
@@ -125,33 +140,15 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let post = posts[indexPath.row]
+        let post = posts[indexPath.section]
         let comments = (post["comments"] as? [PFObject]) ?? []
-
-        let comment = PFObject(className: "Comments")
-        
         // For the add comment cell
         if indexPath.row == comments.count + 1 {
             showCommentBar = true
             becomeFirstResponder()
             commentBar.inputTextView.becomeFirstResponder()
+            selectedPost = post
         }
-        
-//        // Text will go here
-//        comment["text"] = ""
-//        comment["post"] = post
-//        comment["author"] = PFUser.current()!
-//
-//        post.add(comment, forKey: "comments")
-//
-//        post.saveInBackground{ (success, error) in
-//            if success{
-//                print("Comment Saved")
-//            } else {
-//                print("Error occurred saving comment")
-//            }
-//        }
-        
     }
     
     @IBAction func onLogout(_ sender: Any) {
