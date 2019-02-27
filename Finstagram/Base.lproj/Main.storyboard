@@ -187,6 +187,41 @@
                                             <outlet property="photoImageView" destination="1D7-h7-Nd7" id="IfJ-Ch-EMV"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="49" id="x0j-TA-DMk" customClass="CommentCell" customModule="Finstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="391" width="375" height="49"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x0j-TA-DMk" id="VgE-4p-VS2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxc-5r-sIA">
+                                                    <rect key="frame" x="81" y="8" width="75" height="32.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwO-zK-OKC">
+                                                    <rect key="frame" x="43" y="8" width="30" height="32.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Zxc-5r-sIA" secondAttribute="bottom" constant="8" id="9sA-Rk-kwV"/>
+                                                <constraint firstItem="Zxc-5r-sIA" firstAttribute="top" secondItem="VgE-4p-VS2" secondAttribute="top" constant="8" id="DF9-Ns-OYk"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zxc-5r-sIA" secondAttribute="trailing" constant="8" id="IXB-Kh-FCj"/>
+                                                <constraint firstItem="rwO-zK-OKC" firstAttribute="top" secondItem="VgE-4p-VS2" secondAttribute="top" constant="8" id="NGe-Pi-cPC"/>
+                                                <constraint firstAttribute="bottom" secondItem="rwO-zK-OKC" secondAttribute="bottom" constant="8" id="RdK-I2-gah"/>
+                                                <constraint firstItem="Zxc-5r-sIA" firstAttribute="leading" secondItem="rwO-zK-OKC" secondAttribute="trailing" constant="8" id="lpG-IH-73X"/>
+                                                <constraint firstItem="rwO-zK-OKC" firstAttribute="leading" secondItem="VgE-4p-VS2" secondAttribute="leading" constant="43" id="tir-a0-WCh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="Zxc-5r-sIA" id="e2L-XZ-43f"/>
+                                            <outlet property="userLabel" destination="rwO-zK-OKC" id="HWz-q8-kra"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
